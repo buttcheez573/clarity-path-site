@@ -1,0 +1,470 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarity Path Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage-green: #9BAE9A;
+      --dusty-blue: #8AA6B1;
+      --warm-charcoal: #404846;
+      --light-bg: #f7f5f0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--warm-charcoal);
+      text-align: center;
+    }
+    .splash {
+      width: 100%;
+      min-height: 100vh;
+      background: url('images/header-bg.png?v=3') center center / cover no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+      background-color: #0e1a0f;"  // darker green base tone to match mobile rendering
+    }
+  ]
+}
+      position: relative;
+      transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
+    }
+    .splash::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, rgba(247, 245, 240, 0) 0%, var(--light-bg) 100%);
+      pointer-events: none;
+    }
+    body.scrolled .splash {
+      opacity: 0.1;
+      transform: scale(1.05);
+      filter: blur(3px);
+    }
+    .splash img.logo {
+      position: absolute;
+      top: 5vh;
+      left: 20px;
+      height: 60px;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .section h1, .section h2 {
+      font-family: 'Playfair Display', serif;
+    }
+    .section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1.3rem;
+      margin: 0 auto;
+      max-width: 720px;
+    }
+    nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--sage-green);
+  padding: 1rem 2rem;
+  border-radius: 0 0 12px 12px;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+    nav a {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.6rem;
+  width: auto;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0.2rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+    nav a:hover {
+      background-color: var(--sage-green);
+      color: white;
+      border-color: var(--sage-green);
+      box-shadow: 0 0 16px rgba(155, 174, 154, 0.5);
+      transform: scale(1.08);}
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .book-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .book-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .cta {
+      background-color: var(--warm-charcoal);
+      color: white;
+      padding: 2rem;
+    }
+    footer {
+      background-color: var(--dusty-blue);
+      color: white;
+      padding: 1rem;
+    }
+    .intro {
+      background-color: #e9f1ec;
+      padding: 4rem 2rem;
+      border-radius: 12px;
+    }
+    .welcome-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+    .welcome-list li {
+      margin: 0.5rem 0;
+    }
+    @media screen and (max-width: 768px) {
+  nav {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-items: center;
+    background-color: var(--sage-green);
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.5rem;
+    box-sizing: border-box;
+  }
+      .splash {
+        background: url('images/header-bg-mobile.png?v=1') center center / cover no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: top center;
+        height: 75vh;
+        min-height: 75vh;
+        margin-bottom: -5vh;
+        transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
+      }
+    }
+      .hero-cta {
+  position: absolute;
+  bottom: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background: var(--sage-green);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 12px rgba(155, 174, 154, 0.5);
+  opacity: 1;
+  z-index: 10;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+    .hero-cta:hover {
+  box-shadow: 0 0 18px rgba(155, 174, 154, 0.8);
+  background-color: var(--sage-green);
+  color: white;
+}
+
+
+  60% {
+    transform: scale(1.1) translate(-50%, 0);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.97) translate(-50%, 0);
+  }
+  100% {
+    transform: scale(1) translate(-50%, 0);
+  }
+}
+  60% {
+    transform: translate(-50%, -20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+</style>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="splash" style="position: relative;">
+    <a href="#books" class="hero-cta">Explore Our Titles</a>
+    
+    
+  </div>
+  <section class="section intro" id="intro" style="background-color: #e9f1ec; padding: 4rem 2rem; border-radius: 12px; opacity: 0; transform: translateY(30px); transition: opacity 1.2s ease-out, transform 1.2s ease-out;">
+  <img src="images/logo.png?v=2" alt="Clarity Path Publishing Logo" style="width: 140px; margin-bottom: 2rem;">
+  <h1>Welcome to Clarity Path Publishing</h1>
+    <p><em>Your journey to clarity starts here.</em></p>
+    <p>We create empowering, action-focused self-help books designed to spark confidence, reduce stress, and help you reclaim control — one small step at a time.</p>
+    <ul class="welcome-list">
+      <li>✔️ Simple habits, lasting transformation</li>
+      <li>✔️ Designed for busy, overwhelmed minds</li>
+      <li>✔️ Authored with heart, backed by research</li>
+    </ul>
+  </section>
+  <section class="section" style="text-align: center; padding: 3.5rem 2rem 4rem 2rem; background-color: #ffffff; border-radius: 12px; margin-top: -2rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.75rem;">📬 The Clarity Chronicle 📬</h2>
+  <p style="font-size: 1.2rem; max-width: 680px; margin: 0 auto 1.25rem auto;">Your weekly dose of clear thinking and practical insights — delivered straight to your inbox.</p>
+  <p style="font-size: 1rem; max-width: 640px; margin: 0 auto 2rem auto; color: #555;"><div style="background-color: #f2f9f5; border-left: 5px solid var(--sage-green); padding: 1.2rem 1.5rem; border-radius: 8px; max-width: 640px; margin: 0 auto 2rem auto; font-size: 1rem; color: #444; line-height: 1.6;">
+Each Chronicle is packed with bite-sized clarity tips, motivating mindset shifts, and behind-the-scenes updates from the world of Clarity Path Publishing. Think of it as your personal pause button — a weekly breather filled with insight, intention, and momentum.
+</div></p>
+  <form action="https://formspree.io/f/xyzjgakp" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; max-width: 500px; margin: 0 auto;">
+    <input type="email" name="email" placeholder="Enter your email" required style="padding: 0.9rem 1.2rem; width: 100%; max-width: 400px; border: 1px solid #ccc; border-radius: 30px; font-size: 1rem; text-align: center; background-color: #f9f9f9; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+    <button type="submit" style="background-color: var(--sage-green); color: white; padding: 0.75rem 2rem; font-size: 1.1rem; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; box-shadow: 0 3px 8px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0, 0, 0, 0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 3px 8px rgba(0,0,0,0.1)';">
+      Subscribe Now
+    </button>
+  </form>
+  <div id="success-message" style="display:none; margin-top: 1.5rem; font-size: 1.1rem; color: var(--sage-green); font-weight: bold; opacity: 0; transform: scale(0.95); transition: opacity 0.8s ease-in-out, transform 0.4s ease-in-out;">
+    🌿 You’re on the path to clarity — check your inbox for your first Chronicle!
+  </div>
+</section>
+  <nav style="max-width: 960px; margin: -1rem auto 0 auto; padding: 1rem 2rem; background-color: var(--sage-green); border-radius: 12px; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+  <a href="#books" style="padding: 0.75rem 1.5rem; background-color: white; color: var(--sage-green); border: 2px solid var(--sage-green); border-radius: 24px; font-family: 'Lato', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">Books</a>
+  <a href="#testimonials" style="padding: 0.75rem 1.5rem; background-color: white; color: var(--sage-green); border: 2px solid var(--sage-green); border-radius: 24px; font-family: 'Lato', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">Testimonials</a>
+  <a href="#workbooks" style="padding: 0.75rem 1.5rem; background-color: white; color: var(--sage-green); border: 2px solid var(--sage-green); border-radius: 24px; font-family: 'Lato', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">Companion Workbooks</a>
+  <a href="#about" style="padding: 0.75rem 1.5rem; background-color: white; color: var(--sage-green); border: 2px solid var(--sage-green); border-radius: 24px; font-family: 'Lato', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">About the Author</a>
+</nav>
+  <section class="section" id="books" data-aos="fade-up" style="background-color: #ffffff; border-radius: 12px; padding: 4rem 2rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);">
+  <h2 style="font-size: 2.5rem; color: var(--sage-green); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">📚 Coming Soon to Kindle & Amazon</h2>
+  <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto; color: var(--warm-charcoal);">Explore the upcoming titles from Clarity Path Publishing — designed to help you reclaim your time, focus, and confidence. Every book is crafted with care and packed with practical tools you can use starting day one.</p>
+    <div class="books">
+      <div class="book-card" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="height: 360px; width: 100%; display: flex; align-items: center; justify-content: center;">
+          <img src="images/book1.png?v=2" alt="The 1% Shift Cover" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+        </div>
+        <h3 style="color: var(--dusty-blue); font-size: 1.4rem; margin-top: 1rem;">The 1% Shift</h3>
+        <p>Tiny Actions. Massive Life Change.</p>
+        <a href="#" class="cta-button" style="display:inline-block; margin-top:1rem; padding:0.6rem 1.2rem; background-color:var(--sage-green); color:white; border-radius:30px; font-weight:600; text-decoration:none; transition:background-color 0.3s;">Preorder Now</a>
+      </div>
+      <div class="book-card" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="height: 360px; width: 100%; display: flex; align-items: center; justify-content: center;">
+          <img src="images/book2.png?v=2" alt="Panic Later Cover" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+        </div>
+        <h3 style="color: var(--dusty-blue); font-size: 1.4rem; margin-top: 1rem;">Panic Later</h3>
+        <p>Break Free from Stress and Reclaim Your Focus.</p>
+        <a href="#" class="cta-button" style="display:inline-block; margin-top:1rem; padding:0.6rem 1.2rem; background-color:var(--sage-green); color:white; border-radius:30px; font-weight:600; text-decoration:none; transition:background-color 0.3s;">Preorder Now</a>
+      </div>
+      <div class="book-card" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="height: 360px; width: 100%; display: flex; align-items: center; justify-content: center;">
+          <img src="images/book3.png?v=2" alt="Confidence Comeback Cover" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+        </div>
+        <h3 style="color: var(--dusty-blue); font-size: 1.4rem; margin-top: 1rem;">Confidence Comeback</h3>
+        <p>What to Do When You've Lost Your Spark.</p>
+        <a href="#" class="cta-button" style="display:inline-block; margin-top:1rem; padding:0.6rem 1.2rem; background-color:var(--sage-green); color:white; border-radius:30px; font-weight:600; text-decoration:none; transition:background-color 0.3s;">Preorder Now</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="section" id="testimonials" data-aos="fade-up" style="background-color: #fef9f2; border-radius: 12px; padding: 4rem 2rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);">
+  <h2 style="font-size: 2.4rem; color: var(--sage-green); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">🌟 What Readers Are Saying</h2>
+  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem auto; color: var(--warm-charcoal);">Real voices. Real breakthroughs. Discover how Clarity Path Publishing is transforming lives — one small step at a time.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: left;">
+    <div style="background: white; border-left: 5px solid var(--sage-green); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);">
+      <p style="font-style: italic; font-size: 1rem;">“After reading <strong>The 1% Shift</strong>, I finally stopped waiting for motivation to strike and just started. Small steps really do snowball.”</p>
+      <p style="margin-top: 0.5rem; font-weight: bold; color: var(--dusty-blue);">— Jenna R., Chicago</p>
+    </div>
+    <div style="background: white; border-left: 5px solid var(--sage-green); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);">
+      <p style="font-style: italic; font-size: 1rem;">“I didn’t expect a self-help book to feel like a conversation with a good friend, but <strong>Panic Later</strong> nailed it. Calming, smart, and incredibly useful.”</p>
+      <p style="margin-top: 0.5rem; font-weight: bold; color: var(--dusty-blue);">— Marcus T., Atlanta</p>
+    </div>
+    <div style="background: white; border-left: 5px solid var(--sage-green); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);">
+      <p style="font-style: italic; font-size: 1rem;">“Casey Harper’s writing gave me permission to be both a mess and a work in progress. <strong>Confidence Comeback</strong> reminded me that growth doesn’t have to be loud to be real.”</p>
+      <p style="margin-top: 0.5rem; font-weight: bold; color: var(--dusty-blue);">— Leila M., Seattle</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="workbooks" data-aos="fade-up" style="background-color: #e9f1ec; border-radius: 12px; padding: 4rem 2rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);">
+  <h2 style="font-size: 2.2rem; color: var(--sage-green); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">✏️ Companion Workbooks</h2>
+  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem auto; color: var(--warm-charcoal);">Download practical, printable guides built to help you take action on what you read. These companion workbooks walk hand-in-hand with our core titles.</p>
+</section>
+  <section class="section" id="about" data-aos="fade-up" style="background-color: #ffffff; border-radius: 12px; padding: 4rem 2rem 3rem 2rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+  <h2 style="font-size: 2.2rem; color: var(--sage-green); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">👤 Meet the Author</h2>
+  <a href="meet-the-author.html">
+    <img src="images/casey-harper-headshot.png" style="width: 260px; height: 260px; object-fit: cover; object-position: center top; border-radius: 50%; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25); margin-bottom: 1.5rem; border: 6px solid var(--dusty-blue); background-color: white;">
+  </a>
+  <p style="font-size: 1.05rem; font-weight: 500; font-style: italic; color: var(--dusty-blue); max-width: 680px; margin: 0 auto 0.5rem auto;">Casey Harper helps readers cut through the noise and reconnect with what truly matters — with warmth, clarity, and real-life impact.</p>
+  <a href="meet-the-author.html" style="display: inline-block; padding: 0.6rem 1.2rem; background-color: var(--sage-green); color: white; border-radius: 24px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; margin-bottom: 1.5rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">Read More</a><style>
+      a[href="meet-the-author.html"]:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: var(--warm-charcoal); line-height: 1.6;">Casey Harper is the voice behind Clarity Path Publishing — blending research, warmth, and action into every title. Through micro-action frameworks and relatable stories, Casey helps readers rediscover their momentum and design lives that feel truly their own.</p>
+  </section>
+  <div class="cta" style="background-color: #ffffff; color: var(--warm-charcoal); text-align: center; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);">
+  <img src="images/logo.png?v=2" alt="Clarity Path Publishing Logo" style="width: 135px; margin-bottom: 0.75rem;">
+  <h2 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: var(--sage-green);">Follow Along the Path</h2>
+  <p style="font-size: 1.1rem; max-width: 680px; margin: 0 auto 1.5rem auto;">Join our journey toward clarity and growth — one inspired insight at a time.</p>
+  <div style="margin-top: 1.5rem; background-color: var(--sage-green); padding: 0.4rem 0.6rem; border-radius: 50px; display: inline-flex; justify-content: center; gap: 0.5rem; flex-wrap: nowrap; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);">
+    <a href="https://x.com/claritypathpub" target="_blank" style="background-color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--sage-green); box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+      <img src="images/x-icon.png" alt="X" style="width: 28px; height: 28px; object-fit: contain;">
+    </a>
+    <a href="https://www.instagram.com/claritypathpub/" target="_blank" style="background-color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--sage-green); box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+      <img src="images/instagram-icon.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: contain;">
+    </a>
+    <a href="#" style="background-color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--sage-green); box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+      <img src="images/facebook-icon.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: contain;">
+    </a>
+    <a href="#" style="background-color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--sage-green); box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+      <img src="images/amazon-icon.png" alt="Amazon Storefront" style="width: 28px; height: 28px; object-fit: contain;">
+    </a>
+  </div>
+  </div>
+  
+  <footer>
+  &copy; 2025 Clarity Path Publishing. All rights reserved.
+</footer>
+  <script>
+    window.addEventListener('scroll', () => {
+      const splash = document.querySelector('.splash');
+      const threshold = window.innerHeight * 0.1;
+      if (window.scrollY > threshold) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+    
+  const intro = document.getElementById('intro');
+
+  window.addEventListener('scroll', () => {
+    const threshold = window.innerHeight * 0.1;
+    if (window.scrollY > threshold) {
+      document.body.classList.add('scrolled');
+      intro.style.opacity = '1';
+      intro.style.transform = 'translateY(0)';
+    } else {
+      document.body.classList.remove('scrolled');
+      intro.style.opacity = '0';
+      intro.style.transform = 'translateY(30px)';
+    }
+  });
+</script>
+  
+  <script>
+    // Custom Smooth Scroll with Easing
+    const links = document.querySelectorAll('nav a[href^="#"]');
+    const easeInOutCubic = (t) => t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    function smoothScrollTo(target, duration = 800) {
+      const startY = window.pageYOffset;
+      const offset = window.innerWidth <= 768 ? 120 : 0;
+      const targetY = target.getBoundingClientRect().top + startY - offset;
+      const startTime = performance.now();
+
+      function scroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+        window.scrollTo(0, startY + (targetY - startY) * ease);
+        if (elapsed < duration) requestAnimationFrame(scroll);
+      }
+
+      requestAnimationFrame(scroll);
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetID = link.getAttribute('href').slice(1);
+        const targetSection = document.getElementById(targetID);
+        if (targetSection) smoothScrollTo(targetSection);
+      });
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  const form = document.querySelector('form');
+  const successMsg = document.getElementById('success-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        successMsg.style.display = 'block';
+        successMsg.style.transform = 'scale(1)';
+        setTimeout(() => {
+          successMsg.style.opacity = '1';
+        }, 100);
+
+        // Trigger confetti burst
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      } else {
+        alert('Oops! Something went wrong.');
+      }
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-out-cubic'
+  });
+</script>
+</body>
+</html>
+

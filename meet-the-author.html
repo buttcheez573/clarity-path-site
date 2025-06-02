@@ -1,0 +1,129 @@
+<!-- meet-the-author.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Author – Casey Harper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage-green: #9BAE9A;
+      --dusty-blue: #8AA6B1;
+      --warm-charcoal: #404846;
+      --light-bg: #f7f5f0;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--warm-charcoal);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .main-content {
+      flex: 2;
+    }
+    .sidebar {
+      flex: 1;
+      background: #eef2ec;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+    .author-photo, .extra-photo {
+      width: 100%;
+      border-radius: 12px;
+      border: 4px solid var(--sage-green);
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--dusty-blue);
+      color: white;
+      margin-top: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .main-content, .sidebar {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .sidebar {
+        margin-top: 2rem;
+        background-color: #f0f4f1;
+      }
+      .author-photo, .extra-photo {
+        width: 100% !important;
+        height: auto;
+      }
+      h1 {
+        font-size: 2.2rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <div style="text-align: center; margin-top: 2rem;">
+        <h1 style="font-size: 3rem; color: var(--sage-green); margin-bottom: 1.2rem; border-bottom: 3px solid var(--sage-green); display: inline-block; padding-bottom: 0.4rem;">Meet Casey Harper</h1>
+      </div>
+      <a href="meet-the-author.html"><img src="images/casey-harper-headshot.png" alt="Casey Harper" class="author-photo" style="width: 60%; max-width: 300px; display: block; margin: 1rem auto;" /></a>
+      <p>Welcome—I'm thrilled you're here! I'm Casey Harper, founder of Clarity Path Publishing, and I'm passionate about helping you discover the small, powerful steps that lead to big, lasting transformations.</p>
+      <p>Born and raised in the lively suburbs of Chicago, my journey into empowering personal change began during my time at the University of Illinois at Urbana-Champaign, where I earned my Bachelor of Science degree. My fascination with human potential and personal growth led me directly into collegiate athletics administration, where mentoring driven student-athletes sparked a deeper passion: helping people unlock their true potential through mindful, sustainable change.</p>
+      <p>Motivated to deepen this commitment, I pursued and earned a Master of Education in Educational, School, and Counseling Psychology with an emphasis in Positive Coaching and Athletic Leadership from the University of Missouri, along with a Graduate Certificate in Positive Coaching. Go Tigers! (You'll always find a hint of Mizzou pride in my workspace.)</p>
+      <p>Through these academic and professional experiences, I discovered a powerful truth: transformative growth doesn't happen overnight. It unfolds gradually through small, consistent actions—the kind you can realistically take, even on your busiest days.</p>
+      <p>That insight led me to write my first bestselling book, <em>The 1% Shift: Tiny Actions, Massive Life Change</em>. Since then, I've continued to write with one clear goal: to empower smart, ambitious young professionals—like you—to manage stress, sharpen your focus, and cultivate lasting confidence through practical micro-actions.</p>
+      <p>My books—including <em>Panic Later: How to Break Free from Constant Stress and Reclaim Your Focus</em>—combine warmth, humor, relatable storytelling, and science-backed strategies. My promise to you is never to overwhelm you with jargon or unattainable ideals, but instead to equip you with actionable tools and reassuring encouragement every step of the way.</p>
+      <p>When I'm not writing, you'll find me savoring slow mornings with strong coffee, embarking on spontaneous road trips, or playfully pretending to ignore my work emails during downtime.</p>
+      <p><strong>Ready to start your journey toward a calmer, clearer, more confident life? You're exactly where you need to be. Let’s take the next step together—one small action at a time.</strong></p>
+      <img src="images/casey-harper-extra1.png" alt="Casey Harper Image 1" class="extra-photo" />
+      <img src="images/casey-harper-extra2.png" alt="Casey Harper Image 2" class="extra-photo" />
+    </div>
+    <div class="sidebar">
+      <h2>Qualifications</h2>
+      <ul>
+        <li><strong>B.S.</strong> – University of Illinois</li>
+        <li><strong>M.Ed.</strong> – University of Missouri</li>
+        <li><strong>Graduate Certificate</strong> – Positive Coaching</li>
+        <li><strong>Founder</strong> – Clarity Path Publishing</li>
+        <li><strong>Bestselling Author</strong> – The 1% Shift</li>
+      </ul>
+      <hr style="margin: 1.5rem 0;" />
+      <h2>Quick Facts</h2>
+      <ul>
+        <li>🟢 Midwest native with Mizzou pride</li>
+        <li>☕ Addicted to slow mornings and strong coffee</li>
+        <li>🎯 Passionate about micro-action-based change</li>
+        <li>✍️ Writing style: warm, humorous, actionable</li>
+      </ul>
+      <hr style="margin: 1.5rem 0;" />
+      <h2>Bookshelf Highlights</h2>
+      <ul>
+        <li><em>The 1% Shift</em> – Tiny Actions, Massive Life Change</li>
+        <li><em>Panic Later</em> – Stress Relief for the Overwhelmed</li>
+        <li><em>Confidence Comeback</em> – Reignite Your Spark</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Clarity Path Publishing – All rights reserved.
+  </footer>
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="index.html" style="background-color: var(--sage-green); color: white; padding: 0.75rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: 600;">← Back to Home</a>
+  </div>
+</body>
+</html>
